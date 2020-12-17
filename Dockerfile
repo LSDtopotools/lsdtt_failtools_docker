@@ -1,7 +1,7 @@
-# This is the full lsdtopytools container
-# It includes all the python packages needed to run lsdtopytools
+# This is the full lsdfailtools container
+# It includes all the python packages needed to run lsdtfailtools
 # As well as visualising the data
-# Pull base image. We start from the miniconda imade
+# Pull base image. We start from the miniconda image
 FROM conda/miniconda3
 MAINTAINER Simon Mudd (simon.m.mudd@ed.ac.uk)
 
@@ -48,3 +48,8 @@ RUN apt-get update && apt-get install -y \
 
 # Set the working directory
 WORKDIR /LSDTopoTools
+
+# Copy the startup script to install python stack
+COPY start_failtools.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/start_failtools.sh
+
