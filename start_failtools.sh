@@ -23,4 +23,7 @@ cd /LSDTopoTools/lsdfailtools
 echo "I am going to install failtools:"
 pip install .
 
+echo "You are ready to run some landlide prediction. "
+echo "Please see the documentation in the readme at"
+echo "https://github.com/LSDtopotools/lsdfailtools"
 
