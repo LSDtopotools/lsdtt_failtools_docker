@@ -54,12 +54,8 @@ $ docker run -it -v C:\LSDTopoTools:/LSDTopoTools lsdtopotools/lsdtt_pytools_doc
 
 #### Installing local python packages
 
-1. We include a script to install some local python packages. To run, use:
-
-```console
-# install_lsdtt_python_packages.sh
-```
-2. This will install `lsdttparamselector`, `lsdttviztools`, and `lsdtopytools`.
+1. Go into `lsdfailtools`
+2. Run `pip install .`
 
 
 
@@ -73,28 +69,6 @@ $ docker run -it -v C:\LSDTopoTools:/LSDTopoTools lsdtopotools/lsdtt_pytools_doc
   * https://lsdtopotools.github.io/LSDTT_documentation/LSDTT_chi_analysis.html
 
 
-
-#### Running a jupyter notebook from this container
-
-1. The lsdpytools container can also serve as a host for [jupyter notebooks](https://jupyter.org/)
-2. You need to open your docker container with a port:
-
-```console
-# docker run -it -v C:\LSDTopoTools:/LSDTopoTools -p 8888:8888 lsdtopotools/lsdtt_pytools_docker
-```
-
-  * Note that you should update the `C:\LSDTopoTools` to reflect the directory structure on your locak machine.
-
-3. Then, inside the container, start the notebook:
-
-```console
-# jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
-```
-
-4. When you run this command, it will give you some html addresses. *These will not work from your host computer!!* But these addresses do show you a `token`: you can see it in the address after `token=`.
-  1. Instead, go into a browser on your host computer and go to http://localhost:8888/
-  2. Then, in the password box, insert the `token` that was shown in the docker container.
-  3. Yay, you can now start working with notebooks, using all the fun geospatial stuff that is in this container!
 
 
 ## Docker notes
